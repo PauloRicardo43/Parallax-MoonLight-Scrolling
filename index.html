@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Parallax Moon Light</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <header>
+        <a href="https://www.linkedin.com/in/paulo-ricardo-dev/" class="logo">Social</a>
+        <ul>
+            <li><a href="https://github.com/PauloRicardo43?tab=repositories">GitHub<a>
+            </a></li>
+            <li><a href="https://web.whatsapp.com/send?phone=+5521976186538">Contact<a>
+            </a></li>
+            <li><a href="https://pauloricardo43.github.io/Mundo-Invertido/">Other Project<a>
+            </a></li>
+            <li><a href="https://pauloricardo43.github.io/calculadora-de-gorjetas/">Other Project<a>
+            </a></li>
+            <li><a href="https://pauloricardo43.github.io/NLW-Esports-Explore/">Other Project<a>
+            </a></li>
+            <li><a href="https://pauloricardo43.github.io/Projeto-Pokedex/">Other Project<a>
+            </a></li>
+        </ul>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="https://www.instagram.com/chapter19banda/?igshid=YmMyMTA2M2Y%3D" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Moon Light</h2>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>Olá, Eu sou Paulo<br>Espero que tenha gostado deste meu projeto feito em HTML,CSS e Javascript<br>
+            <br>
+            uso neste HTML um estilo chamado Parallax Scrolling, que é por meio de rolagem de página o cenário se mover, fazendo uma arte em 2D exibir em movimento uma impressão 3D<br>
+            Logo a cima ficará meus contatos e exibição de meus outros projetos já feitos<br>
+            Este projeto foi feito com a intenção de alguma empresa me ver, pois estou a procura de um emprego na área de programação<br>
+            logo em Explore verá o Instagram da minha banda a Chapter-19<br>
+            Neste projeto uni as 2 coisas que eu mais amo, que é tecnologia e música<br>
+            Espero que tenha gostado e espero que com este pequeno portfólio possa abrir uma união entre mim e a sua empresa<br>
+            Poderemos fazer um excelente time juntos ao avanço.
+        </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let smountains_behind = document.getElementById('mountains_behind');
+        let btn = document.getElementById('btn');
+        let text = document.getElementById('text');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.5 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+    </body>
+</html>
